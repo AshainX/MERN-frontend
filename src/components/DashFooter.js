@@ -2,6 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHouse } from "@fortawesome/free-solid-svg-icons"
 import { useNavigate, useLocation } from 'react-router-dom'
 
+//functional component
+//Dash uses React under the hood to render the user interface 
+//you see when you load a web page created with Dash
 const DashFooter = () => {
 
     const navigate = useNavigate()
