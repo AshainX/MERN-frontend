@@ -4,13 +4,17 @@ import DashFooter from './DashFooter'
 
 const DashLayout = () => {
     return (
-        <> //fragment 
-            <DashHeader /> //protected Layout
+       /*//fragment */
+       /*<Outlet /> - wrapped in div so we can aplly css styles*/
+       <> 
+            
+            <DashHeader /> 
             <div className="dash-container">
-                <Outlet /> //wrapped in div so we can aplly css styles
+                <Outlet /> 
             </div>
             <DashFooter />
         </>
     )
+    /*protected Layout*/
 }
 export default DashLayout
