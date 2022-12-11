@@ -4,10 +4,10 @@ import DashFooter from './DashFooter'
 
 const DashLayout = () => {
     return (
-        <>
+        <> //fragment 
             <DashHeader />
             <div className="dash-container">
-                <Outlet />
+                <Outlet /> //wrapped in div so we can aplly css styles
             </div>
             <DashFooter />
         </>
