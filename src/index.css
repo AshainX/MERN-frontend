@@ -58,9 +58,9 @@
 
 /* || GENERAL STYLES */
 
-body {
+body {   /*image background and colouring */
   font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
+  min-height: 50vh;
   background-color: var(--BGCOLOR);
   color: var(--COLOR);
   background-image: url('./img/background.jpg');
@@ -103,7 +103,7 @@ a:focus-visible {
 .welcome {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .public {
