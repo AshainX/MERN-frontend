@@ -4,6 +4,7 @@ import {
 } from "@reduxjs/toolkit";
 import { apiSlice } from "../../app/api/apiSlice"
 
+ /* sorting out the employee */
 const notesAdapter = createEntityAdapter({
     sortComparer: (a, b) => (a.completed === b.completed) ? 0 : a.completed ? 1 : -1
 })

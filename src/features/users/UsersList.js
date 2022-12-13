@@ -12,13 +12,13 @@ const UsersList = () => {
     } = useGetUsersQuery()
 
     let content
-//loading
+
     if (isLoading) content = <p>Loading...</p>
-// error
+
     if (isError) {
         content = <p className="errmsg">{error?.data?.message}</p>
     }
-//success
+
     if (isSuccess) {
 
         const { ids } = users

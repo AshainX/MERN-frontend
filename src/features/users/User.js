@@ -9,7 +9,7 @@ const User = ({ userId }) => {
     const user = useSelector(state => selectUserById(state, userId))
 
     const navigate = useNavigate()
-// logic 
+
     if (user) {
         const handleEdit = () => navigate(`/dash/users/${userId}`)
 

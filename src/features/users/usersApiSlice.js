@@ -1,9 +1,8 @@
-import{
+import {
     createSelector,
     createEntityAdapter
 } from "@reduxjs/toolkit";
-
-import { apiSlice } from "../../app/api/apiSlice";
+import { apiSlice } from "../../app/api/apiSlice"
 
 const usersAdapter = createEntityAdapter({})
 
@@ -16,13 +15,13 @@ export const usersApiSlice = apiSlice.injectEndpoints({
             validateStatus: (response, result) => {
                 return response.status === 200 && !result.isError
             },
-            keepUnusedDataFor: 10,
+            keepUnusedDataFor: 5,
             transformResponse: responseData => {
                 const loadedUsers = responseData.map(user => {
                     user.id = user._id
                     return user
                 });
-                return usersAdapter.setAll(initialState, loadedUsers) /* response of userdata */
+                return usersAdapter.setAll(initialState, loadedUsers)
             },
             providesTags: (result, error, arg) => {
                 if (result?.ids) {
@@ -36,11 +35,10 @@ export const usersApiSlice = apiSlice.injectEndpoints({
     }),
 })
 
-export const {      /* generates hook */
+export const {
     useGetUsersQuery,
 } = usersApiSlice
 
-//selectors from here
 // returns the query result object
 export const selectUsersResult = usersApiSlice.endpoints.getUsers.select()
 
